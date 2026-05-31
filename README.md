@@ -54,6 +54,7 @@ tests with `python3 test_*.py`.
 | [`vector-db-cost-showdown-2026`](vector-db-cost-showdown-2026) | Vector DB Cost Showdown 2026 |
 | [`260-guardrails-first`](260-guardrails-first) | Guardrails-First: Making AI Agents Reliable at 3am |
 | [`261-llm-attacker-defense`](261-llm-attacker-defense) | When the Attacker Has an LLM: Defending Against AI-Developed Exploits |
+| [`262-context-engineering`](262-context-engineering) | Context Engineering as Infrastructure: The 2026 Field Guide |
 
 ## License
 
