@@ -1,0 +1,8 @@
+{
+  "category": "technical",
+  "priority": 5,
+  "summary": "All users receiving 500 errors on checkout; revenue stopped.",
+  "confidence": 0.99,
+  "_test_input": "URGENT: All our users are getting 500 errors on checkout. Revenue stopped.",
+  "_test_id": "priority_urgent"
+}

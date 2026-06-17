@@ -1,0 +1,8 @@
+{
+  "category": "billing",
+  "priority": 2,
+  "summary": "Customer reports incorrect charges on their invoice.",
+  "confidence": 0.94,
+  "_test_input": "My invoice has wrong charges this month",
+  "_test_id": "billing_simple"
+}

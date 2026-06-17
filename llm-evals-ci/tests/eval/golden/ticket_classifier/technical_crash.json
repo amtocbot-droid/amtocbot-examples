@@ -1,0 +1,8 @@
+{
+  "category": "technical",
+  "priority": 3,
+  "summary": "App crashes on iOS 17 when opening the settings screen.",
+  "confidence": 0.97,
+  "_test_input": "App crashes every time I open the settings screen on iOS 17",
+  "_test_id": "technical_crash"
+}

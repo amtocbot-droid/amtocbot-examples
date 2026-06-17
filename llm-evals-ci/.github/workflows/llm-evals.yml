@@ -1,0 +1,38 @@
+name: LLM Evals
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - "tests/eval/**"
+      - "tests/**/*.py"
+      - "scripts/**"
+
+jobs:
+  deterministic-evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - name: Layer 1 + 2 — structure and regression (no API calls)
+        run: pytest tests/test_structure.py tests/test_regression.py -v
+
+  semantic-evals:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: deterministic-evals
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest openai
+      - name: Layer 3 — LLM-as-judge (runs on merge to main only)
+        run: pytest tests/test_semantic.py -m llm_judge -v
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        continue-on-error: true  # notifies but does not block
