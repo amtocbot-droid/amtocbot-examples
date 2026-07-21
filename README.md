@@ -57,6 +57,7 @@ tests with `python3 test_*.py`.
 | [`262-context-engineering`](262-context-engineering) | Context Engineering as Infrastructure: The 2026 Field Guide |
 | [`263-slm-on-device`](263-slm-on-device) | SLMs On-Device: Pick, Quantize, and Ship a Small Language Model |
 | [`259-ai-coding-tools`](259-ai-coding-tools) | AI Coding Tools in 2026: Cursor, Claude Code, Copilot, Windsurf Compared |
+| [`blog-301-langflow-idor-repro`](blog-301-langflow-idor-repro) | Langflow Just Became the First AI Agent Platform on CISA's Must-Patch List (CVE-2026-55255) |
 
 ## License
 
